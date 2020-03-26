@@ -1,0 +1,20 @@
+<div>
+    <h2>
+        User details
+    </h2>
+    {% if user %}
+    <p>
+        Id: {{user.id}}
+    </p>
+    <p>
+        Email: {{user.email}}
+    </p>
+    <p>
+        Phone: {{user.phone_number}}
+    </p>
+    {% else %}
+    <p>
+        No user detail found
+    </p>
+    {% endif %}
+</div>
