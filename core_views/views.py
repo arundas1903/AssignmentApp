@@ -1,5 +1,6 @@
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, get_object_or_404, redirect
+from django.contrib.auth import login
 
 from .models import User
 from .forms import SetPasswordForm, SearchForm
@@ -21,7 +22,6 @@ def search_users(request):
         form = SearchForm(request.POST)
         if form.is_valid():
             phone = form.cleaned_data['phone']
-            # user.set_password(phone)
             users = User.objects.filter(phone_number__contains=phone)
             return render(request, 'search.html', {'form': form, 'users': users})
 
@@ -45,7 +45,9 @@ def set_password(request):
             user = request.user
             password = form.cleaned_data['password']
             user.set_password(password)
-            return redirect('/home/')
+            user.save()
+            login(request, user, backend='django.contrib.auth.backends.ModelBackend')
+            return redirect('/')
 
     else:
         form = SetPasswordForm()

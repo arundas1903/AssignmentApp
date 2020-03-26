@@ -17,11 +17,11 @@ from django.contrib import admin
 from django.urls import path, include
 
 from core_views.views import home, list_users, user_detail, set_password, search_users
-from auth_views.views import login, user_logout, set_phone
+from auth_views.views import login_user, user_logout, set_phone
 
 urlpatterns = [
-    path('home/', home, name='home'),
-    path('login/', login, name='login'),
+    path('', home, name='home'),
+    path('login/', login_user, name='login'),
     path('logout/', user_logout, name='logout'),
     path('oauth/', include('social_django.urls', namespace='social')),
     path('admin/', admin.site.urls),
