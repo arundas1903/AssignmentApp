@@ -27,7 +27,11 @@ Refresh the bundled dataset:
 npm run data:build
 ```
 
-## Run
+## Live site
+
+GitHub Pages: https://arundas1903.github.io/AssignmentApp/
+
+## Run locally
 
 ```bash
 npm install
@@ -40,3 +44,5 @@ Build for production:
 npm run build
 npm run preview
 ```
+
+Deployments are published by `.github/workflows/deploy-a2p-atlas.yml`.

@@ -6,6 +6,8 @@ Django assignment app, plus **A2P Atlas** — a single-page world map of A2P SMS
 
 See [`a2p-atlas/README.md`](a2p-atlas/README.md).
 
+**Live:** https://arundas1903.github.io/AssignmentApp/
+
 ```bash
 cd a2p-atlas
 npm install
