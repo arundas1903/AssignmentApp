@@ -26,6 +26,14 @@ const CAPABILITY_LABELS = {
 const GEOJSON_URL =
   "https://cdn.jsdelivr.net/gh/datasets/geo-countries@master/data/countries.geojson";
 
+// Some Natural Earth / geo-countries polygons use placeholder ISO codes.
+const NAME_ISO_OVERRIDES = {
+  france: "FR",
+  norway: "NO",
+  taiwan: "TW",
+  kosovo: "XK",
+};
+
 const byIso = new Map(dataset.countries.map((c) => [c.iso, c]));
 
 let activeFilter = "alphanumeric_sender_id";
@@ -93,14 +101,19 @@ map.setMaxBounds([
 
 function featureIso(feature) {
   const p = feature.properties || {};
-  return (
+  const raw =
     p.ISO_A2 ||
     p.iso_a2 ||
     p["ISO3166-1-Alpha-2"] ||
     p.iso ||
     p.ISO ||
-    null
-  );
+    null;
+
+  if (raw && raw !== "-99" && /^[A-Z]{2}$/.test(raw)) return raw;
+  if (raw === "CN-TW") return "TW";
+
+  const name = String(p.name || p.ADMIN || p.NAME || "").toLowerCase();
+  return NAME_ISO_OVERRIDES[name] || null;
 }
 
 function supportTone(entry) {
