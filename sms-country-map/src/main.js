@@ -43,10 +43,10 @@ let countriesLayer = null;
 const app = document.querySelector("#app");
 app.innerHTML = `
   <div class="shell">
-    <div id="map" class="map" aria-label="World map of A2P SMS support"></div>
+    <div id="map" class="map" aria-label="World map of SMS country support"></div>
     <header class="topbar">
       <div class="brand-block">
-        <h1 class="brand">A2P Atlas</h1>
+        <h1 class="brand">SMS Country Map</h1>
         <p class="tagline">
           See how Application-to-Person SMS senders work in each country —
           alphanumeric IDs, short and long codes, toll-free, and more.

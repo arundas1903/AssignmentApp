@@ -1,5 +1,5 @@
 {
-  "name": "a2p-atlas",
+  "name": "sms-country-map",
   "version": "0.0.0",
   "private": true,
   "type": "module",
@@ -15,5 +15,5 @@
   "dependencies": {
     "leaflet": "^1.9.4"
   },
-  "description": "Single-page world map of A2P SMS sender support by country (AWS data)"
+  "description": "Single-page world map of SMS sender support by country (AWS data)"
 }

@@ -1,4 +1,4 @@
-# A2P Atlas
+# SMS Country Map
 
 Single-page world map of **Application-to-Person (A2P) SMS** sender support by country.
 
@@ -31,6 +31,8 @@ npm run data:build
 
 GitHub Pages: https://arundas1903.github.io/AssignmentApp/
 
+> The Pages URL path follows the GitHub repository name (`AssignmentApp`). Rename the repo to `sms-country-map` if you want the URL to match, then update `vite.config.js` `base` to `/sms-country-map/`.
+
 ## Run locally
 
 ```bash
@@ -45,4 +47,4 @@ npm run build
 npm run preview
 ```
 
-Deployments are published by `.github/workflows/deploy-a2p-atlas.yml`.
+Deployments are published by `.github/workflows/deploy-sms-country-map.yml`.

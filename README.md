@@ -1,15 +1,15 @@
-# AssignmentApp
+# SMS Country Map
 
-Django assignment app, plus **A2P Atlas** — a single-page world map of A2P SMS sender support by country.
+Django assignment app, plus **SMS Country Map** — a single-page world map of A2P SMS sender support by country.
 
-## A2P Atlas
+## SMS Country Map
 
-See [`a2p-atlas/README.md`](a2p-atlas/README.md).
+See [`sms-country-map/README.md`](sms-country-map/README.md).
 
 **Live:** https://arundas1903.github.io/AssignmentApp/
 
 ```bash
-cd a2p-atlas
+cd sms-country-map
 npm install
 npm run dev
 ```
