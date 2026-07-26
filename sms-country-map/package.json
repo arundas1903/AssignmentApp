@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "data:build": "node scripts/build-data.mjs"
+    "data:build": "node scripts/build-data.mjs",
+    "publish:arundas": "node scripts/publish-to-arundas-me.mjs"
   },
   "devDependencies": {
     "vite": "^8.1.1"

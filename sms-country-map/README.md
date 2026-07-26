@@ -29,9 +29,18 @@ npm run data:build
 
 ## Live site
 
-GitHub Pages: https://arundas1903.github.io/AssignmentApp/
+- https://arundas.me/a2patlas/
+- Fallback project Pages: https://arundas1903.github.io/AssignmentApp/ (uses a different `base`; prefer arundas.me)
 
-> The Pages URL path follows the GitHub repository name (`AssignmentApp`). Rename the repo to `sms-country-map` if you want the URL to match, then update `vite.config.js` `base` to `/sms-country-map/`.
+Publish into the portfolio repo (CRA copies `public/a2patlas` into the site build):
+
+```bash
+npm run publish:arundas -- /path/to/portfolio
+cd /path/to/portfolio
+git add public/a2patlas
+git commit -m "Add SMS Country Map at /a2patlas"
+git push
+```
 
 ## Run locally
 
