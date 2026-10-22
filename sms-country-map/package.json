@@ -11,7 +11,7 @@
     "publish:arundas": "node scripts/publish-to-arundas-me.mjs"
   },
   "devDependencies": {
-    "vite": "^8.1.1"
+    "vite": "^8.1.6"
   },
   "dependencies": {
     "leaflet": "^1.9.4"
